@@ -25,6 +25,6 @@ urlpatterns = [
     path('about/', views.about),
     path('contact/',views.contact),
 
-    path('findPer/',views.findPercentage)
-
+    path('findPer/',views.findPercentage),
+    path('printFunc/',views.printFunc)
 ]

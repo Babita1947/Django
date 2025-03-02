@@ -26,3 +26,5 @@ def findPercentage(reqeust):
         "perc":perc,
         "ans":ans
     })
+def printFunc(request):
+    return HttpResponse("<h1>Print Function</h1>")
