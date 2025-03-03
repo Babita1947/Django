@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -26,5 +26,9 @@ urlpatterns = [
     path('contact/',views.contact),
 
     path('findPer/',views.findPercentage),
-    path('printFunc/',views.printFunc)
+    path('printFunc/',views.printFunc),
+
+
+    # Map the chai project
+    path('chai/', include('chai.urls'))
 ]

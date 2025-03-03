@@ -21,10 +21,27 @@ def findPercentage(reqeust):
     perc=5
 
     ans=price*perc/100
-    return JsonResponse({
+
+    data = {
         "price":price,
         "perc":perc,
         "ans":ans
-    })
+    }
+
+
+    # return JsonResponse({
+    #     "price":price,
+    #     "perc":perc,
+    #     "ans":ans
+    # })
+
+    return render(reqeust, 'percent.html', data)
 def printFunc(request):
     return HttpResponse("<h1>Print Function</h1>")
+
+
+# def fetchEmployeeData(reqest):
+#     # 1. Fetch all the emplyeees from the databases
+#     # 2. Fetched emplyee data ko Pass kar do employee.html (jaha par hame data render karwana hai)
+
+#     return render("")
