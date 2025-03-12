@@ -17,6 +17,12 @@ Chai Detail Page
         <p class="text-gray-600">{{chai.description}}</p>
         <p class="text-lg font-semibold text-gray-700">Price: <span class="text-gray-600">{{chai.price}}</span></p>
     </div>
+
+    <a href="{% url 'all_chai' %}">
+        <button 
+        type="button"
+        class="inline-flex w-[100%] items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600  hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Back</button>
+    </a>
 </div>
 
 {% endblock %}
