@@ -7,9 +7,10 @@ Chai Detail Page
 {% block content %}
 
 <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-200 p-6 mt-10">
-    <h2 class="text-2xl font-bold text-center text-green-600 mb-4">Chai Details</h2>
+    <h2 class="text-2xl font-bold text-center text-green-600 mb-4">{{chai.name}} Details</h2>
     <div class="space-y-4">
-        <img class="rounded-lg shadow-lg w-full h-48 object-cover" src="{{chai.image.url}}" alt="" class="">
+        <img class="rounded-lg shadow-lg w-full h-48 object-cover" src="{{ chai.image.url }}" alt="Chai Image">
+   
         <p class="text-lg font-semibold text-gray-700">Name: <span class="text-gray-600">{{chai.name}}</span></p>
         <p class="text-lg font-semibold text-gray-700">Type: <span class="text-gray-600">{{chai.type}}</span></p>
         <p class="text-lg font-semibold text-gray-700">Date Added: <span class="text-gray-600">{{chai.date_added}}</span></p>
