@@ -28,7 +28,7 @@ class ChaiVarity(models.Model):
         return self.name
 
 
-# Ont to Many
+# One to Many
 
 class ChaiReview(models.Model):
     chai = models.ForeignKey(ChaiVarity, on_delete=models.CASCADE, related_name='reviews')
