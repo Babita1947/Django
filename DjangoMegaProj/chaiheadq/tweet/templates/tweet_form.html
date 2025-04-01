@@ -16,8 +16,14 @@ Chai aur Tweet
     {% endif %}
 </h2>
 
-<form method="post" enctype="multipart/form-data" action="" class="form">
-    {% csrf_token %}
+ {% comment %} 
+    CSRF (Cross-Site Request Forgery) is a type of cyber attack where a hacker tricks a user into performing an unwanted action on a website they are logged into. 
+    Django automatically generates a unique token and checks it in every form submission to make sure the request is coming from the same user.
+    When you submit the form, Django checks whether the CSRF token sent in the form matches the one stored in the user's session.
+    If it matches, the request is accepted. ✅
+ {% endcomment %}
+<form method="post" enctype="multipart/form-data" class="form">
+    {% csrf_token %} 
     {{ form.as_p }}
     <button class="btn btn-warning" type="submit">Submit</button>
 </form>
